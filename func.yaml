@@ -1,16 +1,19 @@
 name: clipboard
 version: 0.1.0
-digest: sha256:df88bf61d46a0b5e8a6bcfabb3a87354571ed0f683658565958d99de4798138f
-#registry: 10.20.30.11:8080
-context: cyan
+digest: sha256:797897f5cf0e2f683c0cff2c7be278ae0dadeb62402b345a9133f2814a12088a
+registry: 192.168.122.182:8000
+context: mindwm
 filters:
   - all:
       - exact:
           type: org.mindwm.v1.clipboard
+      - not:
+          prefix:
+            subject: '#'
 run:
   envs:
     - name: NEO4J_URI
-      value: bolt://cyan-neo4j:7687
+      value: bolt://mindwm-neo4j:7687
     - name: NEO4J_USERNAME
       value: neo4j
     - name: NEO4J_PASSWORD

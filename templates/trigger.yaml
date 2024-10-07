@@ -1,25 +1,25 @@
 apiVersion: eventing.knative.dev/v1
 kind: Trigger
 metadata:
-  name: knfunc
-  namespace: context-name
+  name: knfunc-clipboard
+  namespace: context-mindwm
 spec:
-  broker: context-name-broker
+  broker: context-broker
   delivery:
     deadLetterSink:
       ref:
         apiVersion: serving.knative.dev/v1
         kind: Service
-        name: context-name-broker-dead-letter
-        namespace: context-name
+        name: dead-letter
+        namespace: context-mindwm
   filter: {}
   filters:
     any:
     - exact:
-        type: touch
+        type: org.mindwm.v1.clipboard
   subscriber:
     ref:
       apiVersion: serving.knative.dev/v1
       kind: Service
-      name: knfunc
-      namespace: context-name
+      name: clipboard
+      namespace: context-mindwm
