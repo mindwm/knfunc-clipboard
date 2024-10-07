@@ -1,15 +1,12 @@
-name: io-context
+name: clipboard
 version: 0.1.0
 digest: sha256:df88bf61d46a0b5e8a6bcfabb3a87354571ed0f683658565958d99de4798138f
-registry: 10.20.30.11:8080
+#registry: 10.20.30.11:8080
 context: cyan
 filters:
   - all:
       - exact:
-          type: org.mindwm.v1.iodocument
-      - not:
-          prefix:
-            subject: '#'
+          type: org.mindwm.v1.clipboard
 run:
   envs:
     - name: NEO4J_URI
