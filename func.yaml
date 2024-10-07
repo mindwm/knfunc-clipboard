@@ -1,6 +1,6 @@
 name: clipboard
 version: 0.1.0
-digest: sha256:797897f5cf0e2f683c0cff2c7be278ae0dadeb62402b345a9133f2814a12088a
+digest: sha256:c3d014fdfdd4248444ab9a7334e19dcc038471932b1f3fbdc9c530351df239bf
 registry: 192.168.122.182:8000
 context: mindwm
 filters:
