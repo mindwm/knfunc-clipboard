@@ -21,6 +21,7 @@ async def func_clipboard(
 
     user = graph.User(username=username, traceparent=traceparent).merge()
     host = graph.Host(hostname=hostname, traceparent=traceparent).merge()
+    graph.UserHasHost(source=user, target=host, traceparent=traceparent).merge()
 
     clip_board_graph = graph.Clipboard(  
         uuid = uuid,
